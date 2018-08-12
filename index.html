@@ -11,15 +11,45 @@
       </a>
       <nav class="main-navigation">
         <ul>
-          <li><a href="catalog.html">Каталог</a></li>
+          <li><a href="catalog.html">Каталог</a>
+            <ul class="catalog-submenu">
+              <li><a href="#"><span class="submenu-novelty">Новинки</span></a></li>
+              <li><a href="ice-cream.html">Сливочное</a></li>
+              <li><a href="#">Щербеты</a></li>
+              <li><a href="#">Фруктовый лёд</a></li>
+              <li><a href="#">Мелорин</a></li>
+            </ul>
+          </li>
           <li><a href="payment.html">Доставка и оплата</a></li>
           <li><a href="about.html">О Компании</a></li>
         </ul>
       </nav>
+
       <div class="user-navigation">
         <ul>
-          <li class="search"><a href="#">Поиск</a></li>
-          <li class="login-link"><a href="#">Вход</a></li>
+          <li class="search"><a href="#">Поиск</a>
+            <ul>
+              <li><span class="search-submenu">Что ищем?</span></li>
+            </ul>
+          </li>
+
+          <li class="login-link"><a href="#">Вход</a>
+            <ul>
+              <li>
+                <section class="login-link-submenu">
+                  <h2 class="visually-hidden">Личный кабинет</h2>
+                  <span>Электронная почта</span>
+                  <span>Пароль</span>
+                  <a href="#" class="button button-middle">Войти</a>
+                  <p>
+                    <a href="#">Забыли пароль?</a>
+                    <a href="#">Новая регистрация</a>
+                  </p>
+                </section>
+              </li>
+            </ul>
+          </li>
+
           <li class="cart"><a href="#">Пусто</a></li>
         </ul>
       </div>
@@ -29,14 +59,13 @@
     </header>
 
     <main>
-      <!-- <h1 class="visually-hidden">Магазин мороженого «Глэйси»</h1> -->
       <div class="slider">
         <ul class="toggle">
           <li><span class="btn-toggle"></span></li>
           <li><span class="btn-toggle"></span></li>
           <li><span class="btn-toggle"></span></li>
         </ul>
-        <p>Крем-брюле и пломбир
+        <p class="slider-title">Крем-брюле и пломбир
           с малиновым джемом</p>
         <a href="#" class="button button-big">Давайте оба!</a>
       </div>
@@ -58,12 +87,10 @@
       <section class="product">
         <h2 class="visually-hidden">Хиты продаж</h2>
         <div class="product-item">
-          <a href="#">
             <img src="http://placehold.it/150x100" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой" width="" height="">
             <p class="product-price-value">
               310&#8381;<span class="product-price-unit">/кг</span>
             </p>
-          </a>
           <a href="#">
             <h3 class="product-text">
               Сливочное с апельсиновым джемом и цитрусовой стружкой
@@ -72,12 +99,10 @@
         </div>
 
         <div class="product-item">
-          <a href="#">
             <img src="http://placehold.it/150x100" alt="Сливочно-кофейное с кусочками шоколада" width="" height="">
             <p class="product-price-value">
               380&#8381;<span class="product-price-unit">/кг</span>
             </p>
-          </a>
           <a href="#">
             <h3 class="product-text">
               Сливочно-кофейное с кусочками шоколада
@@ -86,12 +111,10 @@
         </div>
 
         <div class="product-item">
-          <a href="#">
             <img src="http://placehold.it/150x100" alt="Сливочно-клубничное с присыпкой из белого шоколада" width="" height="">
             <p class="product-price-value">
               355&#8381;<span class="product-price-unit">/кг</span>
             </p>
-          </a>
           <a href="#">
             <h3 class="product-text">
               Сливочно-клубничное с присыпкой из белого шоколада
@@ -100,12 +123,10 @@
         </div>
 
         <div class="product-item">
-          <a href="#">
             <img src="http://placehold.it/150x100" alt="Сливочное крем-брюле с карамельной подливкой" width="" height="">
             <p class="product-price-value">
               415&#8381;<span class="product-price-unit">/кг</span>
             </p>
-          </a>
           <a href="#">
             <h3 class="product-text">
               Сливочное крем-брюле с карамельной подливкой
@@ -145,7 +166,7 @@
         <div class="subscription">
           <p class="subscription-text">Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
           <p>
-            <span></span><a href="#" class="button button-middle">Отправить</a>
+            <span>Электронная почта</span><a href="#" class="button button-middle">Отправить</a>
           </p>
         </div>
       </div>
@@ -180,80 +201,15 @@
         <ul>
           <li class="footer-menu-active"><a href="#">Для поставщиков</a></li>
           <li><a href="#">О производстве</a></li>
-        </ul>
-        <ul>
           <li><a href="#">Наши документы</a></li>
           <li><a href="#">Экологические стандарты</a></li>
         </ul>
       </div>
 
       <div class="copyright">
-        <a href="#"><img src="https://htmlacademy.ru/intensive/htmlcss" alt="Логотип HTML Academy" width="" height=""></a>
+        <a href="https://htmlacademy.ru/intensive/htmlcss"><img src="http://placehold.it/90x30" alt="Логотип HTML Academy" width="" height=""></a>
         <p>Сделано в <span><a href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a></span> &copy;2017</p>
       </div>
     </footer>
-
-    <div class="modal modal-catalog">
-      <ul>
-        <li><span class="modal-catalog-novelty">Новинки</span></li>
-        <li>Сливочное</li>
-        <li>Щербеты</li>
-        <li>Фруктовый лёд</li>
-        <li>Мелорин</li>
-      </ul>
-    </div>
-
-    <div class="modal modal-search">
-      <span>Что ищем?</span>
-    </div>
-
-    <section class="modal modal-login">
-      <h2 class="visually-hidden">Личный кабинет</h2>
-      <span>Электронная почта</span>
-      <span>Пароль</span>
-      <a href="#" class="button button-middle">Войти</a>
-      <p>
-        <b>Забыли пароль?</b>
-        <a href="#">Новая регистрация</a>
-      </p>
-    </section>
-
-    <section class="modal modal-cart">
-      <h2 class="visually-hidden">Корзина с товарами</h2>
-      <table class="modal-table">
-        <tr>
-          <td>
-            <span>x</span>
-            <img src="http://placehold.it/20x20" alt="Пломбир с апельсиновым джемом" width="" height="">
-          </td>
-          <td>
-            Пломбир с апельсиновым джемом
-          </td>
-          <td>
-            1,5кг х <span>200 руб.</span>
-          </td>
-          <td>
-            300 руб.
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <span>x</span>
-            <img src="http://placehold.it/20x20" alt="Клубничный пломбир с присыпкой из белого шоколада" width="" height="">
-          </td>
-          <td>
-            Клубничный пломбир с присыпкой из белого шоколада
-          </td>
-          <td>
-            1,5кг х <span>300 руб.</span>
-          </td>
-          <td>
-            450 руб.
-          </td>
-        </tr>
-      </table>
-      <b>Итого: 750 руб.</b>
-      <a href="#" class="button button-middle">Оформить заказ</a>
-    </section>
   </body>
 </html>
