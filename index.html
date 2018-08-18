@@ -27,9 +27,15 @@
 
       <div class="user-navigation">
         <ul>
-          <li class="search"><a href="#">Поиск</a>
+          <li class="search"><a href="#" aria-label="Поиск"></a>
             <ul>
-              <li><span class="search-submenu">Что ищем?</span></li>
+              <li>
+                <form action="https://echo.htmlacademy.ru" method="get">
+                  <label class="visually-hidden">Поиск
+                    <input class="search-submenu" type="search" name="search" placeholder="Что ищем?">
+                  </label>
+                </form>
+              </li>
             </ul>
           </li>
 
@@ -38,19 +44,29 @@
               <li>
                 <section class="login-link-submenu">
                   <h2 class="visually-hidden">Личный кабинет</h2>
-                  <span>Электронная почта</span>
-                  <span>Пароль</span>
-                  <a href="#" class="button button-middle">Войти</a>
-                  <p>
-                    <a href="#">Забыли пароль?</a>
-                    <a href="#">Новая регистрация</a>
-                  </p>
+                  <form class="login-form" action="https://echo.htmlacademy.ru" method="post">
+                    <p class="login-item">
+                      <label for="login-email" class="visually-hidden">Электронная почта</label>
+                      <input type="email" id="login-email" name="email" value="" placeholder="Электронная почта">
+                    </p>
+                    <p class="login-item">
+                      <label for="login-password" class="visually-hidden">Пароль</label>
+                      <input type="password" id="login-password" name="password" value="" placeholder=">Пароль">
+                    </p>
+                    <a href="#" class="button button-middle">Войти</a>
+                    <p>
+                      <a href="#">Забыли пароль?</a>
+                      <a href="#">Новая регистрация</a>
+                    </p>
+                  </form>
                 </section>
               </li>
             </ul>
           </li>
 
-          <li class="cart"><a href="#">Пусто</a></li>
+          <li class="cart">
+            <a href="#" aria-label="Корзина">Пусто</a>
+          </li>
         </ul>
       </div>
       <p>С 10 до 20, ежедневно
@@ -60,14 +76,26 @@
 
     <main>
       <div class="slider">
-        <ul class="toggle">
-          <li><span class="btn-toggle"></span></li>
-          <li><span class="btn-toggle"></span></li>
-          <li><span class="btn-toggle"></span></li>
-        </ul>
         <p class="slider-title">Крем-брюле и пломбир
           с малиновым джемом</p>
-        <a href="#" class="button button-big">Давайте оба!</a>
+        <form action="https://echo.htmlacademy.ru" method="post">
+          <ul class="toggle">
+            <li class="btn-toggle">
+              <input class="visually-hidden" type="radio" name="slider-toggle" value="" id="slider-1">
+              <label for="slider-1" class="visually-hidden">Крем-брюле и пломбир
+            с малиновым джемом</label>
+            </li>
+            <li class="btn-toggle">
+              <input class="visually-hidden" type="radio" name="slider-toggle" value="" id="slider-2">
+              <label for="slider-2" class="visually-hidden">"Шоколадный пломбир и лимонный сорбет"</label>
+            </li>
+            <li class="btn-toggle">
+              <input class="visually-hidden" type="radio" name="slider-toggle" value="" id="slider-3">
+              <label for="slider-3" class="visually-hidden">"Пломбир с помадкой и клубничный щербет"</label>
+            </li>
+          </ul>
+          <button type="button" class="button button-big">Давайте оба!</button>
+        </form>
       </div>
 
       <section class="promo">
@@ -80,7 +108,7 @@
         <div class="promo-item">
           <h3>Шоколадки даром!</h3>
           <p class="promo-text">При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.</p>
-          <a href="#" class="button button-middle">Хочу шоколадки!</a>
+          <a href="ice-cream.html" class="button button-middle">Хочу шоколадки!</a>
         </div>
       </section>
 
@@ -166,7 +194,11 @@
         <div class="subscription">
           <p class="subscription-text">Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
           <p>
-            <span>Электронная почта</span><a href="#" class="button button-middle">Отправить</a>
+            <form action="https://echo.htmlacademy.ru" method="post" class="subscription-form">
+              <label class="visually-hidden" for="subscription-email">Электронная почта</label>
+              <input type="email" name="email" id="subscription-email" placeholder="Электронная почта">
+              <button class="button button-middle" type="submit">Отправить</button>
+            </form>
           </p>
         </div>
       </div>
@@ -191,10 +223,10 @@
     <footer class="main-footer">
       <div class="footer-social">
         <ul class="social-button">
-          <li><a href="#">Твиттер</a></li>
-          <li><a href="#">Инстаграм</a></li>
-          <li><a href="#">Фейсбук</a></li>
-          <li><a href="#">Вконтакте</a></li>
+          <li><a href="#" aria-label="Присоединяйтесь к нам в Твиттер">Твиттер</a></li>
+          <li><a href="#" aria-label="Присоединяйтесь к нам в Инстаграм">Инстаграм</a></li>
+          <li><a href="#" aria-label="Присоединяйтесь к нам на Фейсбук">Фейсбук</a></li>
+          <li><a href="#" aria-label="Присоединяйтесь к нам Вконтакте">Вконтакте</a></li>
         </ul>
       </div>
 
@@ -212,5 +244,26 @@
         <p>Сделано в <span><a href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a></span> &copy;2017</p>
       </div>
     </footer>
+
+    <section class="modal modal-feedback">
+      <h3>Мы обязательно вам ответим!</h3>
+      <button class="cross-big" type="button" aria-label="Закрыть окно обратной связи">x</button>
+      <form action="https://echo.htmlacademy.ru" method="post" class="feedback-form">
+        <p>
+            <label class="visually-hidden" for="feedback-name">Как вас зовут?</label>
+            <input type="text" name="name" id="feedback-name" placeholder="Как вас зовут?">
+        </p>
+        <p>
+            <label class="visually-hidden" for="feedback-email">Ваша почта для ответа?</label>
+            <input type="text" name="email" id="feedback-email" placeholder="Ваша почта для ответа?">
+        </p>
+        <p>
+            <label class="visually-hidden" for="feedback-text">Напишите что-нибудь...</label>
+            <textarea name="feedback" id="feedback-text" cols="30" rows="10" placeholder="Напишите что-нибудь..."></textarea>
+        </p>
+        <button class="button button-middle" type="submit">Отправить</button>
+      </form>
+    </section>
+
   </body>
 </html>
