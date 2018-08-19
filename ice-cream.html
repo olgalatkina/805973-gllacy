@@ -27,37 +27,44 @@
 
       <div class="user-navigation">
         <ul>
-          <li class="search"><a href="#">Поиск</a>
-            <ul>
-              <li><span class="search-submenu">Что ищем?</span></li>
-            </ul>
+          <li class="search">
+            <a href="#" aria-label="Открыть форму поиска"></a>
+            <form action="https://echo.htmlacademy.ru" method="get">
+              <label for="search-nav" class="visually-hidden">Поиск</label>
+              <input class="search-submenu" type="search" id="search-nav" name="search" placeholder="Что ищем?">
+              <button class="visually-hidden" type="submit">Искать</button>
+            </form>
           </li>
 
           <li class="login-link"><a href="#">Вход</a>
-            <ul>
-              <li>
-                <section class="login-link-submenu">
-                  <h2 class="visually-hidden">Личный кабинет</h2>
-                  <span>Электронная почта</span>
-                  <span>Пароль</span>
-                  <a href="#" class="button button-middle">Войти</a>
-                  <p>
-                    <a href="#">Забыли пароль?</a>
-                    <a href="#">Новая регистрация</a>
-                  </p>
-                </section>
-              </li>
-            </ul>
+            <section class="login-link-submenu">
+              <h2 class="visually-hidden">Личный кабинет</h2>
+              <form class="login-form" action="https://echo.htmlacademy.ru" method="post">
+                <p class="login-item">
+                  <label for="login-email" class="visually-hidden">Электронная почта</label>
+                  <input type="email" id="login-email" name="email" value="" placeholder="Электронная почта">
+                </p>
+                <p class="login-item">
+                  <label for="login-password" class="visually-hidden">Пароль</label>
+                  <input type="password" id="login-password" name="password" value="" placeholder="Пароль">
+                </p>
+                <button class="button button-middle" type="submit">Войти</button>
+                <p>
+                  <a href="#">Забыли пароль?</a>
+                  <a href="#">Новая регистрация</a>
+                </p>
+              </form>
+            </section>
           </li>
 
-          <li class="cart"><a href="#">2 товара</a>
+          <li class="cart"><a href="#" aria-label="Корзина">2 товара</a>
             <section class="cart-submenu">
                <h2 class="visually-hidden">Корзина с товарами</h2>
               <table class="submenu-table">
                     <tr>
                       <td>
-                        <span>x</span>
-                        <img src="http://placehold.it/20x20" alt="Пломбир с апельсиновым джемом" width="" height="">
+                        <button class="cross-small" type="button" aria-label="Удалить">x</button>
+                        <img src="http://placehold.it/33x33" alt="Пломбир с апельсиновым джемом" width="33" height="33">
                       </td>
                       <td>
                         Пломбир с апельсиновым джемом
@@ -71,8 +78,8 @@
                     </tr>
                     <tr>
                       <td>
-                        <span>x</span>
-                        <img src="http://placehold.it/20x20" alt="Клубничный пломбир с присыпкой из белого шоколада" width="" height="">
+                        <button class="cross-small" type="button" aria-label="Удалить">x</button>
+                        <img src="http://placehold.it/33x33" alt="Клубничный пломбир с присыпкой из белого шоколада" width="33" height="33">
                       </td>
                       <td>
                         Клубничный пломбир с присыпкой из белого шоколада
@@ -105,7 +112,68 @@
       <h1 class="page-title">Сливочное мороженое</h1>
       <section class="filters">
         <h2 class="visually-hidden">Фильтр товаров</h2>
-        <!-- Здесь будет форма -->
+        <form action="https://echo.htmlacademy.ru" method="get">
+          <label for="filter-sorting">Сортировка:</label>
+          <select name="sorting" id="filter-sorting">
+            <option value="by-popularity" selected>по популярности</option>
+            <option value="first-inexpensive">сначала недорогие</option>
+            <option value="first-expensive">сначала дорогие</option>
+            <option value="by-fat">по жирности</option>
+          </select>
+
+          <label for="filter-price">Цена: 100 руб. – 500 руб.</label>
+          <input type="range" name="price" id="filter-price" min="0" max="5000" step="5">
+
+          <fieldset>
+            <legend>Жирность:</legend>
+            <ul>
+              <li class="filter-fat">
+                <input class="visually-hidden" type="radio" name="product-fat" value="0%" id="filter-fat-0">
+                <label for="filter-fat-0">0%</label>
+              </li>
+              <li class="filter-fat">
+                <input class="visually-hidden" type="radio" name="product-fat" value="10%" id="filter-fat-10" checked>
+                <label for="filter-fat-10">до 10%</label>
+              </li>
+              <li class="filter-fat">
+                <input class="visually-hidden" type="radio" name="product-fat" value="30%" id="filter-fat-30">
+                <label for="filter-fat-30">до 30%</label>
+              </li>
+              <li class="filter-fat">
+                <input class="visually-hidden" type="radio" name="product-fat" value="more30%" id="filter-fat-more">
+                <label for="filter-fat-more">выше 30%</label>
+              </li>
+            </ul>
+          </fieldset>
+
+          <fieldset>
+            <legend>Наполнители:</legend>
+            <ul>
+              <li class="filter-complement">
+                <input class="visually-hidden" type="checkbox" name="chocolate" id="filter-chocolate" checked>
+                <label for="filter-chocolate">шоколадные</label>
+              </li>
+              <li class="filter-complement">
+                <input class="visually-hidden" type="checkbox" name="sugar" id="filter-sugar" checked>
+                <label for="filter-sugar">сахарные присыпки</label>
+              </li>
+              <li class="filter-complement">
+                <input class="visually-hidden" type="checkbox" name="fruit" id="filter-fruit">
+                <label for="filter-fruit">фрукты</label>
+              </li>
+              <li class="filter-complement">
+                <input class="visually-hidden" type="checkbox" name="syrups" id="filter-syrups">
+                <label for="filter-syrups">сиропы</label>
+              </li>
+              <li class="filter-complement">
+                <input class="visually-hidden" type="checkbox" name="jams" id="filter-jams">
+                <label for="filter-jams">джемы</label>
+              </li>
+            </ul>
+          </fieldset>
+
+          <button class="button button-filter" type="submit">Применить</button>
+        </form>
       </section>
 
       <section class="catalog-products">
@@ -119,6 +187,7 @@
               Сливочное с апельсиновым джемом и цитрусовой стружкой
             </h3>
           </a>
+          <a class="button button-middle" href="#">Быстрый просмотр</a>
         </div>
 
         <div class="product-item">
@@ -131,6 +200,7 @@
               Сливочно-кофейное с кусочками шоколада
             </h3>
           </a>
+          <a class="button button-middle" href="#">Быстрый просмотр</a>
         </div>
 
         <div class="product-item">
@@ -143,6 +213,7 @@
               Сливочно-клубничное с присыпкой из белого шоколада
             </h3>
           </a>
+          <a class="button button-middle" href="#">Быстрый просмотр</a>
         </div>
 
         <div class="product-item">
@@ -155,6 +226,7 @@
               Сливочное крем-брюле с карамельной подливкой
             </h3>
           </a>
+          <a class="button button-middle" href="#">Быстрый просмотр</a>
         </div>
 
         <div class="product-item">
@@ -167,6 +239,7 @@
               Сливочное с брусничным джемом
             </h3>
           </a>
+          <a class="button button-middle" href="#">Быстрый просмотр</a>
         </div>
 
         <div class="product-item">
@@ -179,6 +252,7 @@
               Сливочно-черничное с цельными ягодами черники
             </h3>
           </a>
+          <a class="button button-middle" href="#">Быстрый просмотр</a>
         </div>
 
         <div class="product-item">
@@ -191,6 +265,7 @@
               Сливочно-лимонное с карамельной присыпкой
             </h3>
           </a>
+          <a class="button button-middle" href="#">Быстрый просмотр</a>
         </div>
 
         <div class="product-item">
@@ -203,6 +278,7 @@
               Сливочное с шоколадной стружкой
             </h3>
           </a>
+          <a class="button button-middle" href="#">Быстрый просмотр</a>
         </div>
 
         <div class="product-item">
@@ -215,6 +291,7 @@
               Сливочно-ванильное с кусочками шоколада
             </h3>
           </a>
+          <a class="button button-middle" href="#">Быстрый просмотр</a>
         </div>
 
         <div class="product-item">
@@ -227,6 +304,7 @@
               Сливочное с ментоловым сиропом
             </h3>
           </a>
+          <a class="button button-middle" href="#">Быстрый просмотр</a>
         </div>
 
         <div class="product-item">
@@ -239,6 +317,7 @@
               Сливочно с кусочками чёрного шоколада
             </h3>
           </a>
+          <a class="button button-middle" href="#">Быстрый просмотр</a>
         </div>
 
         <div class="product-item">
@@ -251,6 +330,7 @@
               Сливочное с мятным сиропом
             </h3>
           </a>
+          <a class="button button-middle" href="#">Быстрый просмотр</a>
         </div>
       </section>
 
@@ -268,10 +348,10 @@
     <footer class="main-footer">
       <div class="footer-social">
         <ul class="social-button">
-          <li><a href="#">Твиттер</a></li>
-          <li><a href="#">Инстаграм</a></li>
-          <li><a href="#">Фейсбук</a></li>
-          <li><a href="#">Вконтакте</a></li>
+          <li><a href="#" aria-label="Присоединяйтесь к нам в Твиттер">Твиттер</a></li>
+          <li><a href="#" aria-label="Присоединяйтесь к нам в Инстаграм">Инстаграм</a></li>
+          <li><a href="#" aria-label="Присоединяйтесь к нам на Фейсбук">Фейсбук</a></li>
+          <li><a href="#" aria-label="Присоединяйтесь к нам Вконтакте">Вконтакте</a></li>
         </ul>
       </div>
 
