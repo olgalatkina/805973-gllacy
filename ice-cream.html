@@ -27,44 +27,37 @@
 
       <div class="user-navigation">
         <ul>
-          <li class="search"><a href="#" aria-label="Поиск"></a>
-            <ul>
-              <li>
-                <form action="https://echo.htmlacademy.ru" method="get">
-                  <label class="visually-hidden">Поиск
-                    <input class="search-submenu" type="search" name="search" placeholder="Что ищем?">
-                  </label>
-                </form>
-              </li>
-            </ul>
+          <li class="search">
+            <a href="#" aria-label="Открыть форму поиска"></a>
+            <form action="https://echo.htmlacademy.ru" method="get">
+              <label for="search-nav" class="visually-hidden">Поиск</label>
+              <input class="search-submenu" type="search" id="search-nav" name="search" placeholder="Что ищем?">
+              <button class="visually-hidden" type="submit">Искать</button>
+            </form>
           </li>
 
           <li class="login-link"><a href="#">Вход</a>
-            <ul>
-              <li>
-                <section class="login-link-submenu">
-                  <h2 class="visually-hidden">Личный кабинет</h2>
-                  <form class="login-form" action="https://echo.htmlacademy.ru" method="post">
-                    <p class="login-item">
-                      <label for="login-email" class="visually-hidden">Электронная почта</label>
-                      <input type="email" id="login-email" name="email" value="" placeholder="Электронная почта">
-                    </p>
-                    <p class="login-item">
-                      <label for="login-password" class="visually-hidden">Пароль</label>
-                      <input type="password" id="login-password" name="password" value="" placeholder="Пароль">
-                    </p>
-                    <a href="#" class="button button-middle">Войти</a>
-                    <p>
-                      <a href="#">Забыли пароль?</a>
-                      <a href="#">Новая регистрация</a>
-                    </p>
-                  </form>
-                </section>
-              </li>
-            </ul>
+            <section class="login-link-submenu">
+              <h2 class="visually-hidden">Личный кабинет</h2>
+              <form class="login-form" action="https://echo.htmlacademy.ru" method="post">
+                <p class="login-item">
+                  <label for="login-email" class="visually-hidden">Электронная почта</label>
+                  <input type="email" id="login-email" name="email" value="" placeholder="Электронная почта">
+                </p>
+                <p class="login-item">
+                  <label for="login-password" class="visually-hidden">Пароль</label>
+                  <input type="password" id="login-password" name="password" value="" placeholder="Пароль">
+                </p>
+                <button class="button button-middle" type="submit">Войти</button>
+                <p>
+                  <a href="#">Забыли пароль?</a>
+                  <a href="#">Новая регистрация</a>
+                </p>
+              </form>
+            </section>
           </li>
 
-          <li class="cart"><a href="#">2 товара</a>
+          <li class="cart"><a href="#" aria-label="Корзина">2 товара</a>
             <section class="cart-submenu">
                <h2 class="visually-hidden">Корзина с товарами</h2>
               <table class="submenu-table">
@@ -207,6 +200,7 @@
               Сливочно-кофейное с кусочками шоколада
             </h3>
           </a>
+          <a class="button button-middle" href="#">Быстрый просмотр</a>
         </div>
 
         <div class="product-item">
@@ -219,6 +213,7 @@
               Сливочно-клубничное с присыпкой из белого шоколада
             </h3>
           </a>
+          <a class="button button-middle" href="#">Быстрый просмотр</a>
         </div>
 
         <div class="product-item">
@@ -231,6 +226,7 @@
               Сливочное крем-брюле с карамельной подливкой
             </h3>
           </a>
+          <a class="button button-middle" href="#">Быстрый просмотр</a>
         </div>
 
         <div class="product-item">
@@ -243,6 +239,7 @@
               Сливочное с брусничным джемом
             </h3>
           </a>
+          <a class="button button-middle" href="#">Быстрый просмотр</a>
         </div>
 
         <div class="product-item">
@@ -255,6 +252,7 @@
               Сливочно-черничное с цельными ягодами черники
             </h3>
           </a>
+          <a class="button button-middle" href="#">Быстрый просмотр</a>
         </div>
 
         <div class="product-item">
@@ -267,6 +265,7 @@
               Сливочно-лимонное с карамельной присыпкой
             </h3>
           </a>
+          <a class="button button-middle" href="#">Быстрый просмотр</a>
         </div>
 
         <div class="product-item">
@@ -279,6 +278,7 @@
               Сливочное с шоколадной стружкой
             </h3>
           </a>
+          <a class="button button-middle" href="#">Быстрый просмотр</a>
         </div>
 
         <div class="product-item">
@@ -291,6 +291,7 @@
               Сливочно-ванильное с кусочками шоколада
             </h3>
           </a>
+          <a class="button button-middle" href="#">Быстрый просмотр</a>
         </div>
 
         <div class="product-item">
@@ -303,6 +304,7 @@
               Сливочное с ментоловым сиропом
             </h3>
           </a>
+          <a class="button button-middle" href="#">Быстрый просмотр</a>
         </div>
 
         <div class="product-item">
@@ -315,6 +317,7 @@
               Сливочно с кусочками чёрного шоколада
             </h3>
           </a>
+          <a class="button button-middle" href="#">Быстрый просмотр</a>
         </div>
 
         <div class="product-item">
@@ -327,6 +330,7 @@
               Сливочное с мятным сиропом
             </h3>
           </a>
+          <a class="button button-middle" href="#">Быстрый просмотр</a>
         </div>
       </section>
 
