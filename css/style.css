@@ -95,7 +95,7 @@ a {
   background-color: #f7f6f3;
 }
 
-.main-navigation a:current {
+.main-navigation-current {
   color: #ffffff;
 
   background-color: #d07058;
@@ -319,6 +319,7 @@ a {
 }
 
 .product__link {
+  display: inline-block;
   font-size: 17px;
   font-weight: 500;
   line-height: 22px;
@@ -476,7 +477,7 @@ a {
 .footer-menu a {
   font-size: 13px;
   font-weight: 400;
-  line-height: 18px;
+  line-height: 16px;
   color: #ffffff;
 
   box-shadow: 0 1px rgba(255, 255, 255, 0.3);
@@ -491,7 +492,7 @@ a {
   box-shadow: 0 1px rgba(255, 188, 158, 0.3);
 }
 
-.footer-menu-love {
+.footer-menu .footer-menu-love {
   font-weight: 700;
 }
 
