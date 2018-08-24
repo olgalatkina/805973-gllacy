@@ -21,10 +21,13 @@ a {
 /*
 .visually-hidden {
   position: absolute;
-  clip: rect(0 0 0 0);
   width: 1px;
   height: 1px;
   margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 */
 .button {
@@ -46,7 +49,7 @@ a {
 }
 
 .button:active {
-  #fceeec;
+  color: #fceeec;
 
   background-image: linear-gradient(to bottom, #e74a35, #f26843), linear-gradient(rgba(0, 0, 0, 0.07), rgba(0, 0, 0, 0.07));
   box-shadow: inset 0px 2px 2px 0 #942718;
@@ -87,7 +90,7 @@ a {
 
 .main-navigation a:hover,
 .main-navigation a:focus {
-  color: #323232;
+  color: #333333;
 
   background-color: #f7f6f3;
 }
@@ -108,7 +111,7 @@ a {
 }
 
 .submenu-novelty {
-  font-weight: 500;
+  font-weight: 700;
 }
 
 .catalog-submenu {
@@ -129,7 +132,7 @@ a {
   background-color: #f6b5a5;
 }
 
-.catalog-submenu a:current {
+.catalog-submenu .submenu-current {
   color: #ffffff;
 
   background-color: #d07058;
@@ -207,16 +210,18 @@ a {
 
 .login-submenu a {
   font-size: 13px;
-  font-weight: 500;
+  font-weight: 400;
   line-height: 24px;
-  text-decoration: underline;
   color: #323232;
 
+  box-shadow: 0 1px rgba(50, 50, 50, 0.3);
 }
 
 .login-submenu a:hover,
 .login-submenu a:active {
   color: #e84d37;
+
+  box-shadow: 0 1px rgba(232, 77, 55, 0.3);
 }
 
 .cart-submenu {
@@ -318,7 +323,10 @@ a {
   font-weight: 500;
   line-height: 22px;
   color: #ffffff;
-  text-decoration: underline;
+}
+
+.product__link h3 {
+  box-shadow: 0 1px rgba(255, 255, 255, 0.3);
 }
 
 .product__link:hover,
@@ -326,7 +334,12 @@ a {
   color: #ffbc9e;
 }
 
+.product__link h3:hover {
+  box-shadow: 0 1px rgba(255, 188, 158, 0.3);
+}
+
 .features {
+  min-height: 306px;
   border-radius: 15px;
   background-color: #e4d4a5;
   background-image: url(../img/waffle.png);
@@ -346,7 +359,7 @@ a {
 
 .blog-preview {
   width: 560px;
-  height: 220px;
+  min-height: 220px;
   border-radius: 15px;
   background-color: #ffffff;
   background-image: url(../img/article.jpg);
@@ -370,7 +383,7 @@ a {
 
 .subscription {
   width: 560px;
-  height: 220px;
+  min-height: 220px;
   border-radius: 15px;
   background-color: #ffffff;
   background-image: repeating-linear-gradient(135deg,
@@ -384,6 +397,7 @@ a {
 }
 
 .contacts {
+  min-height: 430px;
   background-image: url(../img/map.png);
   background-repeat: no-repeat;
 }
@@ -463,8 +477,9 @@ a {
   font-size: 13px;
   font-weight: 400;
   line-height: 18px;
-  text-decoration: underline;
   color: #ffffff;
+
+  box-shadow: 0 1px rgba(255, 255, 255, 0.3);
 }
 
 .footer-menu a:hover,
@@ -472,6 +487,8 @@ a {
 .copyright a:hover,
 .copyright a:active {
   color: #ffbc9e;
+
+  box-shadow: 0 1px rgba(255, 188, 158, 0.3);
 }
 
 .footer-menu-love {
@@ -489,5 +506,3 @@ a {
   text-decoration: underline;
   color: #fefefe;
 }
-
-
