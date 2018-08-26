@@ -74,6 +74,14 @@ a {
   box-shadow: inset 0px 2px 2px 0 #942718;
 }
 
+.button-product {
+  display: none;
+}
+
+.product__link:hover + .button-product {
+  display: block;
+}
+
 .main-navigation ul,
 .user-navigation ul {
   list-style: none;
@@ -340,19 +348,23 @@ a {
   font-size: 30px;
 }
 
-.product-text {
+.product {
 
 }
 
 .product__link {
   display: inline-block;
+
   font-size: 17px;
   font-weight: 500;
-  line-height: 22px;
+  line-height: 21px;
+  text-align: center;
   color: #ffffff;
 }
 
 .product__link h3 {
+  display: inline;
+
   box-shadow: 0 1px rgba(255, 255, 255, 0.3);
 }
 
