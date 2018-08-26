@@ -6,8 +6,7 @@ body {
   font-size: 16px;
   line-height: 22px;
   font-weight: 400;
-  color: #323232
-;
+  color: #323232;
 
   background-color: #9d8b84;
   background-color: #8996a6;
@@ -18,7 +17,6 @@ a {
   text-decoration: none;
 }
 
-/*
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -29,7 +27,7 @@ a {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
-*/
+
 .button {
   font-size: 18px;
   font-weight: 700;
@@ -267,6 +265,7 @@ a {
   font-size: 14px;
   font-weight: 700;
   line-height: 16px;
+  text-align: right;
   color: #ffffff;
 }
 
@@ -277,6 +276,15 @@ a {
   color: #ffffff;
 }
 
+.slider {
+  width: 1065px;
+  height: 859px;
+  background-color: #849d8f;
+  background-image: url(../img/slider-1.png);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 .slider ul {
   list-style: none;
 }
@@ -285,7 +293,25 @@ a {
   font-size: 60px;
   font-weight: 700;
   line-height: 60px;
+  text-align: center;
   color: #ffffff;
+}
+
+.promo-item {
+  width: 560px;
+  height: 229px;
+  border-radius: 15px;
+}
+
+.promo-item-left {
+  background-image: url(../img/promo-1.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.promo-item_right {
+  background-image: url(../img/promo-2.jpg);
+  background-position: center;
 }
 
 .page-title {
@@ -506,4 +532,118 @@ a {
 .copyright a {
   text-decoration: underline;
   color: #fefefe;
+}
+
+/*--------Сеточные стили---------*/
+
+html,
+body {
+ min-width: 1200px;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+
+  width: 1146px;
+  margin: 0 auto;
+  padding: 0 27px;
+}
+
+.main-header {
+  display: flex;
+  flex-wrap: wrap;
+
+  padding-top: 9px;
+}
+
+.main-header-logo {
+  width: 154px;
+  height: 64px;
+}
+
+.main-navigation {
+  min-width: 700px;
+}
+
+.wrapper-main-navigation {
+  display: flex;
+}
+
+.main-navigation__item{
+  margin-right: 25px;
+}
+
+.wrapper-user-navigation {
+  display: flex;
+}
+
+.user-navigation {
+  min-width: 245px;
+  margin-left: auto;
+}
+
+.working-hours {
+  margin-left: auto;
+}
+
+.slider {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.product-item {
+  width: 267px;
+}
+
+.promo,
+.product,
+.features,
+.wrapper-article {
+  margin-bottom: 40px;
+}
+
+.subscription {
+  display: flex;
+}
+
+.subscription-back {
+  margin: 4px 5px 5px 6px;
+  width: 549px;
+  border-radius: 10px;
+  background-color: #f8f7f4;
+}
+
+.contacts {
+  position: relative;
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.contacts-field {
+  position: absolute;
+  top: 63px;
+  left: 871px;
+  width: 302px;
+}
+
+.social-button {
+  display: flex;
+}
+
+.wrapper-catalog {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-content: flex-start;
+}
+
+.product-item {
+  margin-bottom: 40px;
+}
+
+.pagination-list {
+  justify-content: flex-end;
 }
