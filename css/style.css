@@ -11,6 +11,13 @@ body {
   background-color: #9d8b84;
   background-color: #8996a6;
   background-color: #849d8f;
+  background-image: url(../img/slider-1.png);
+  background-repeat: no-repeat;
+  background-position: center 0;
+}
+
+.inner-page {
+  background-color: #849d8f;
 }
 
 a {
@@ -122,6 +129,11 @@ a {
 
 .catalog-submenu {
   display: none;
+
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
 }
 
 .main-havigation__item--submenu:hover  .catalog-submenu,
@@ -286,11 +298,7 @@ a {
 
 .slider {
   width: 1065px;
-  height: 859px;
-  background-color: #849d8f;
-  background-image: url(../img/slider-1.png);
-  background-repeat: no-repeat;
-  background-position: center;
+  height: 582px;
 }
 
 .slider ul {
@@ -298,6 +306,7 @@ a {
 }
 
 .slider-title {
+  width: 670px;
   font-size: 60px;
   font-weight: 700;
   line-height: 60px;
@@ -307,7 +316,7 @@ a {
 
 .promo-item {
   width: 560px;
-  height: 229px;
+  min-height: 229px;
   border-radius: 15px;
 }
 
@@ -315,11 +324,14 @@ a {
   background-image: url(../img/promo-1.jpg);
   background-repeat: no-repeat;
   background-position: center;
+  background-size: cover;
 }
 
 .promo-item_right {
   background-image: url(../img/promo-2.jpg);
+  background-repeat: no-repeat;
   background-position: center;
+  background-size: cover;
 }
 
 .page-title {
@@ -445,7 +457,7 @@ a {
   font-size: 14px;
   font-weight: 400;
   line-height: 20px;
-  color: #ffffff;
+  color: #323232;
 }
 
 .contacts-main {
@@ -523,8 +535,8 @@ a {
 
 .footer-menu a:hover,
 .footer-menu a:active,
-.copyright a:hover,
-.copyright a:active {
+.copyright .academy:hover,
+.copyright .academy:active {
   color: #ffbc9e;
 
   box-shadow: 0 1px rgba(255, 188, 158, 0.3);
@@ -565,21 +577,27 @@ body {
 .main-header {
   display: flex;
   flex-wrap: wrap;
-
-  padding-top: 9px;
 }
 
 .main-header-logo {
   width: 154px;
   height: 64px;
+  margin-top: 9px;
+  margin-right: 24px;
 }
 
 .main-navigation {
   min-width: 700px;
+  margin-top: 32px;
 }
 
 .wrapper-main-navigation {
   display: flex;
+
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
 }
 
 .main-navigation__item{
@@ -588,26 +606,58 @@ body {
 
 .wrapper-user-navigation {
   display: flex;
+
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
 }
 
 .user-navigation {
   min-width: 245px;
+  margin-top: 23px;
   margin-left: auto;
+  margin-bottom: 20px;
+}
+
+.search,
+.login {
+  margin-right: 10px;
 }
 
 .working-hours {
+  margin: 0;
+  padding: 0;
   margin-left: auto;
 }
 
 .slider {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
 }
 
-.product-item {
-  width: 267px;
+.slider-toggle {
+  align-self: flex-start;
+}
+
+.slider ul,
+.slider-toggle,
+.features-text,
+.social-button,
+.footer-menu ul {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.slider-title {
+  margin: 0;
+  padding: 0;
+  margin-top: 200px;
+  margin-bottom: 26px;
 }
 
 .promo,
@@ -617,28 +667,87 @@ body {
   margin-bottom: 40px;
 }
 
+.promo-item {
+  box-sizing: border-box;
+  padding-top: 23px;
+  padding-left: 20px;
+}
+
+.page-title,
+.promo-text,
+.product-price-value,
+.product-text,
+.features-title,
+.blog-preview-text,
+.blog-preview h4,
+.subscription-text,
+.contacts-field p.
+.copyright p {
+  margin: 0;
+  padding: 0;
+}
+
+.product-item {
+  width: 267px;
+}
+
+.product-price-value {
+  margin-bottom: 35px;
+}
+
+.features {
+  box-sizing: border-box;
+  padding: 29px 20px 26px;
+}
+
+.blog-preview {
+  box-sizing: border-box;
+  padding-left: 20px;
+  padding-top: 26px;
+}
+
+.blog-preview h4 {
+  width: 300px;
+}
+
 .subscription {
   display: flex;
 }
 
 .subscription-back {
-  margin: 4px 5px 5px 6px;
   width: 549px;
+  box-sizing: border-box;
+  margin: 4px 5px 5px 6px;
+  padding: 33px 21px 36px;
+
   border-radius: 10px;
   background-color: #f8f7f4;
 }
 
 .contacts {
+
+}
+
+.wrapper-contacts {
   position: relative;
-  width: 1200px;
-  margin: 0 auto;
 }
 
 .contacts-field {
   position: absolute;
-  top: 63px;
-  left: 871px;
+  top: -375px;
+  right: 27px;
+
   width: 302px;
+  height: 305px;
+  box-sizing: border-box;
+  padding: 32px 25px;
+
+  border-radius: 15px;
+  background-color: #ffffff;
+}
+
+.main-footer {
+  height: 103px;
 }
 
 .social-button {
