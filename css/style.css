@@ -1120,6 +1120,11 @@ label[for="filter-price"],
   box-shadow: 0 -1px rgba(255, 255, 255, 0.3);
 }
 
+.footer-social,
+.footer-menu {
+  padding-top: 16px;
+}
+
 .social-button-list,
 .footer-menu ul {
   margin: 0;
@@ -1132,12 +1137,43 @@ label[for="filter-price"],
   display: flex;
 }
 
+.social-button {
+  width: 38px;
+  height: 38px;
+  margin-right: 10px;
+
+  border: 3px solid rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+}
+
+.social-button:hover {
+  border: 3px solid rgba(255, 255, 255, 0.7);
+}
+
+.social-button:active {
+  border: 3px solid rgba(255, 255, 255, 0.7);
+}
+
 .social-button:hover path {
   fill: #ffffff;
 }
 
-.social-button:hover path {
+.social-button:active path {
   fill: #e9e9e9;
+}
+
+.footer-menu ul {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  align-content: flex-start;
+
+  width: 330px;
+}
+
+.footer-menu li {
+  margin-right: 32px;
 }
 
 .footer-menu a {
@@ -1159,7 +1195,23 @@ label[for="filter-price"],
 }
 
 .footer-menu .footer-menu-love {
+  position: relative;
+
   font-weight: 700;
+}
+
+.footer-menu .footer-menu-love::before {
+  content: "";
+  top: 2px;
+  left: -22px;
+
+  position: absolute;
+  width: 15px;
+  height: 13px;
+
+  background-image: url(../img/svg/heart.svg);
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .copyright p {
