@@ -132,6 +132,10 @@ img {
   padding: 0 27px;
 }
 
+.main {
+
+}
+
 /*--- header ---*/
 
 .main-header-column {
@@ -600,8 +604,9 @@ img {
 */
 
   position: relative;
+
   width: 1065px;
-  height: 582px;
+  height: 527px;
 }
 
 .slider ul {
@@ -613,7 +618,7 @@ img {
 
 .slider-title {
   position: absolute;
-  bottom: 200px;
+  bottom: 140px;
   left: 200px;
 
   width: 670px;
@@ -631,7 +636,7 @@ img {
 /*align-self: flex-start;*/
 
   position: absolute;
-  bottom: 80px;
+  bottom: 40px;
   left: -38px;
 
   margin: 0;
@@ -642,7 +647,7 @@ img {
 
 .button-big {
   position: absolute;
-  bottom: 80px;
+  bottom: 40px;
   left: 400px;
 }
 
