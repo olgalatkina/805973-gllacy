@@ -160,7 +160,7 @@ img {
   display: flex;
   flex-wrap: wrap;
 
-  max-width: 700px;
+    max-width: 700px;
   margin: 0;
   padding: 0;
 
@@ -175,11 +175,7 @@ img {
   list-style: none;
 }
 
-.main-navigation__item {
-
-}
-
-.main-navigation a {
+.main-navigation__link {
   display: block;
 
   padding: 7px 14px;
@@ -193,14 +189,14 @@ img {
   border-radius: 16px;
 }
 
-.main-navigation a:hover,
-.main-navigation a:focus {
+.main-navigation__link:hover,
+.main-navigation__link:focus {
   color: #333333;
 
   background-color: #f7f6f3;
 }
 
-.main-navigation a:active {
+.main-navigation__link:active {
   background-color: #ededed;
   box-shadow: inset 0px 2px 1px 0 #696969;
 }
@@ -211,19 +207,17 @@ img {
   background-color: #d07058;
 }
 
-/*
 .main-navigation__item::after {
   content: "";
-  bottom: 0;
-  left: 0;
+  bottom: 7px;
+  left: 14px;
 
   position: absolute;
-  width: 100%;
+  width: calc(100% - 28px);
   height: 1px;
 
   box-shadow: 0 1px rgba(255, 255, 255, 0.2);
 }
-*/
 
 .main-havigation__item--submenu:hover  .catalog-submenu,
 .main-havigation__item--submenu:focus  .catalog-submenu {
@@ -252,28 +246,28 @@ img {
   border-radius: 5px;
 }
 
-.catalog-submenu a {
+.catalog-submenu__link {
   font-size: 14px;
   line-height: 16px;
   font-weight: 400;
   color: #323232;
 
   background-color: #f7f6f3;
-  border-radius: none;
 }
 
 .submenu-novelty {
-    margin-bottom: 14px;
+  display: block;
+  margin-bottom: 14px;
 
   font-weight: 700;
 }
 
-.catalog-submenu a:hover,
-.catalog-submenu a:focus {
+.catalog-submenu__link:hover,
+.catalog-submenu__link:focus {
   background-color: #fbded7;
 }
 
-.catalog-submenu a:active {
+.catalog-submenu__link:active {
   background-color: #f6b5a5;
 }
 
@@ -1176,12 +1170,13 @@ label[for="filter-price"],
   justify-content: space-between;
   flex-wrap: wrap;
   align-content: flex-start;
+
+  margin-bottom: 80px;
 }
 
-.pagination-list {
+.pagination-list.container {
+  justify-content: flex-end;
 
-  margin: 0;
-  padding: 0;
   margin-bottom: 36px;
 
   list-style: none;
@@ -1194,7 +1189,7 @@ label[for="filter-price"],
 
   width: 27px;
   height: 26px;
-  padding-right: 2px;
+  margin-right: 2px;
 
   font-size: 16px;
   font-weight: 500;
@@ -1219,6 +1214,21 @@ label[for="filter-price"],
   color: #323232;
 
   background-color: #ffffff;
+}
+
+.pagination-item-back,
+.pagination-item-next {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 8px;
+  height: 26px;
+  margin-right: 12px;
+}
+
+.pagination-item-next {
+  margin-right: 0;
 }
 
 .pagination-item-back {
