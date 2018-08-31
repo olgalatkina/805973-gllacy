@@ -235,7 +235,7 @@ img {
   top: 37px;
 
   width: 143px;
-  height: 171px;
+  min-height: 171px;
   margin: 0;
   padding: 0;
 
@@ -333,7 +333,7 @@ img {
 .search__form {
   display: none;
   position: absolute;
-  top: 36px;
+  top: 38px;
   right: 0;
 
   width: 341px;
@@ -344,6 +344,7 @@ img {
   border-radius: 5px;
   box-shadow: 0px 20px 20px 0 rgba(0, 0, 0, 0.4);
 }
+
 .search__form input {
   width: 311px;
   height: 44px;
@@ -370,7 +371,7 @@ img {
 .login-submenu {
   display: none;
   position: absolute;
-  top: 36px;
+  top: 38px;
   right: 0;
 }
 
@@ -419,6 +420,8 @@ img {
 .cart__link:focus circle {
   fill: #000000;
 }
+
+/*.cart__link.cart__link--add:hover path*/
 
 .login-form {
   display: flex;
@@ -489,7 +492,7 @@ img {
 .cart-submenu {
   display: none;
   position: absolute;
-  top: 36px;
+  top: 38px;
   right: 0;
 
   width: 539px;
@@ -1046,7 +1049,17 @@ img {
 }
 
 .breadcrumbs li {
-  margin-right: 5px;
+  position: relative;
+  margin-right: 20px;
+}
+
+.breadcrumbs-previous a::after {
+  content: "»";
+  position: absolute;
+  top: 4px;
+  right: -13px;
+
+  color: #ffffff;
 }
 
 .breadcrumbs a {
