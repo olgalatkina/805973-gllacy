@@ -138,12 +138,11 @@ img {
   display: flex;
   flex-direction: column;
 
-    width: 1146px;
+  width: 1146px;
 }
 
 .main-header-first-line {
   display: flex;
-  flex-direction: row;
 }
 
 .main-header-logo {
@@ -176,9 +175,13 @@ img {
   list-style: none;
 }
 
+.main-navigation__item {
+
+}
+
 .main-navigation a {
   display: block;
-  margin-right: 25px;
+
   padding: 7px 14px;
 
   font-size: 16px;
@@ -211,8 +214,8 @@ img {
 /*
 .main-navigation__item::after {
   content: "";
-  bottom: 8px;
-  left: 10px;
+  bottom: 0;
+  left: 0;
 
   position: absolute;
   width: 100%;
@@ -281,7 +284,6 @@ img {
 }
 
 .user-navigation {
-    max-width: 450px;
   margin-top: 23px;
   margin-left: auto;
   margin-bottom: 20px;
@@ -333,22 +335,6 @@ img {
 .search__link:focus path {
   fill: #000000;
 }
-
-/*
-.search__link::before {
-  content: "";
-  top: 6px;
-  left: 16px;
-
-  position: absolute;
-  width: 17px;
-  height: 17px;
-
-  background-image: url(../img/svg/loupe.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-}
-*/
 
 .search__form {
   display: none;
@@ -440,22 +426,6 @@ img {
   fill: #000000;
 }
 
-/*
-.login__link::before {
-  content: "";
-  top: 6px;
-  left: 16px;
-
-  position: absolute;
-  width: 21px;
-  height: 19px;
-
-  background-image: url(../img/svg/entrance.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-}
-*/
-
 .login-form {
   display: flex;
   flex-wrap: wrap;
@@ -541,22 +511,6 @@ img {
 .cart:hover .cart-submenu {
   display: block;
 }
-
-/*
-.cart__link::before {
-  content: "";
-  top: 6px;
-  left: 16px;
-
-  position: absolute;
-  width: 21px;
-  height: 20px;
-
-  background-image: url(../img/svg/basket.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-}
-*/
 
 .cart__link--add {
   font-size: 14px;
@@ -706,7 +660,6 @@ img {
 .page-title {
   margin: 0;
   padding: 0;
-  margin-bottom: 20px;
 
   font-size: 35px;
   font-weight: 700;
@@ -717,7 +670,6 @@ img {
 .promo-text {
   margin: 0;
   padding: 0;
-  margin-bottom: 45px;
 
   font-size: 18px;
   font-weight: 700;
@@ -727,6 +679,7 @@ img {
 
 .container-product {
   display: flex;
+    flex-wrap: wrap;
   justify-content: space-between;
 
   width: 1200px;
@@ -742,13 +695,15 @@ img {
   position: relative;
 
   width: 293px;
-  min-height: 405px;
+  min-height: 320px;
   padding-top: 6px;
   padding-left: 13px;
   padding-right: 14px;
+  margin-bottom: 37px;
 }
 
-.product-hit {
+.main-page .product-item::after {
+  content: "";
   position: absolute;
   top:  6px;
   left: 13px;
@@ -794,7 +749,6 @@ img {
     vertical-align: middle;
 
   margin-top: 8px;
-  margin-bottom: 8px;
 
   text-align: center;
   color: #ffffff;
@@ -817,21 +771,42 @@ img {
 
 .button-product {
   display: none;
+  position: absolute;
+  top:  339px;
+  left: 46px;
 
   padding: 10px 17px;
 }
 
-.product-item:hover {
-/*z-index: 10;*/
+.product-item:hover .button-product {
+  display: block;
+  z-index: 2;
+}
+
+.product-item:hover.product-item::before {
+  content: "";
+  position: absolute;
+  top:  0;
+  left: 0;
+  z-index: 1;
+
+  width: 293px;
+  min-height: 405px;
 
   background-color: rgba(255, 255, 255, 0.2);
   border-radius: 5px;
   box-shadow: 0px 20px 20px 0 rgba(0, 0, 0, 0.4);
 }
 
-.product-item:hover .button-product {
-  display: block;
+/*-- Это правило не работает --
+
+.product-item:hover .product__link,
+.product-item:hover .product-text,
+.product-item:hover .product-price-unit,
+.product-item:hover .product-price-value {
+  z-index: 2;
 }
+*/
 
 .features {
   width: 1146px;
@@ -888,20 +863,19 @@ img {
   background-position: 0 0;
 }
 
-.features-text li:nth-child(1)::before {
+.features-text .features-ice-cream::before {
   background-image: url(../img/svg/ice-cream.svg);
 }
 
-.features-text li:nth-child(2)::before {
+.features-text .features-cow::before {
   background-image: url(../img/svg/cow.svg);
 }
 
-.features-text li:nth-child(3)::before {
+.features-text .features-eco::before {
   background-image: url(../img/svg/eco.svg);
 }
 
-
-.features-text li:nth-child(4)::before {
+.features-text .features-thermometer::before {
   background-image: url(../img/svg/thermometer.svg);
 }
 
