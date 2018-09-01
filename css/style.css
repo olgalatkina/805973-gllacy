@@ -543,23 +543,71 @@ img {
 
   width: 539px;
   min-height: 242px;
-  padding: 20px;
+  padding: 16px;
   padding-right: 13px;
 
   background-color: #f8f7f4;
   border-radius: 5px;
   box-shadow: 0px 20px 20px 0 rgba(0, 0, 0, 0.4);
+
+  z-index: 1;
 }
 
 .submenu-table {
+  width: 100%;
+
   font-size: 13px;
   font-weight: 400;
   line-height: 16px;
   color: #323232;
+
+  border-collapse: collapse;
+}
+
+.submenu-table td {
+  padding-right: 9px;
+  padding-bottom: 18px;
+
+  vertical-align: center;
+  text-align: left;
+}
+
+.submenu-table tr:last-child {
+  border-bottom: 1px solid #cacac7;
+}
+
+.col-1 {
+  width: 20px;
+}
+
+.col-2 {
+  width: 47px;
+}
+
+.col-3 {
+  width: 242px;
+}
+
+.col-4 {
+  width: 121px;
+}
+
+.col-5 {
+  width: 69px;
 }
 
 .cross-small {
-  display: inline-block;
+  width: 11px;
+  height: 11px;
+
+  font-size: 0;
+
+  background-image: url(../img/svg/cross-small.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  border: 0;
+
+  cursor: pointer;
 }
 
 .submenu-table span {
@@ -567,10 +615,21 @@ img {
 }
 
 .table-total {
+  margin-top: 14px;
+  margin-bottom: 14px;
+
   font-size: 15px;
   font-weight: 700;
   line-height: 18px;
   color: #323232;
+
+  caption-side: bottom;
+  text-align: right;
+}
+
+.button-table {
+  float: right;
+  min-width: 170px;
 }
 
 .working-hours {
@@ -826,7 +885,7 @@ img {
   z-index: 1;
 
   width: 293px;
-    height: calc(358px + .product__link);
+    /*height: calc(358px + .product__link * n );*/
 
   background-color: rgba(255, 255, 255, 0.2);
   border-radius: 5px;
