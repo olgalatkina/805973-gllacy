@@ -235,7 +235,7 @@ img {
 .main-havigation__item--submenu {
   position: relative;
 
-  /*padding-bottom: 20px;*/
+/*padding-bottom: 20px;*/
 }
 
 .catalog-submenu {
@@ -252,22 +252,31 @@ img {
   list-style: none;
 
   background-color: #f8f7f4;
-  box-shadow: 0px 20px 20px 0 rgba(0, 0, 0, 0.4);
   border-radius: 5px;
+  box-shadow: 0px 20px 20px 0 rgba(0, 0, 0, 0.4);
+}
+
+.catalog-submenu li:nth-child(2) {
+  box-shadow: 0 -7px 0 -6px rgba(0, 0, 0, 0.2);
 }
 
 .catalog-submenu__link {
+  display: block;
+  padding: 6px 20px;
+  margin-bottom: 4px;
+
   font-size: 14px;
   line-height: 16px;
   font-weight: 400;
   color: #323232;
+}
 
-  background-color: #f7f6f3;
+.catalog-submenu__link:first-child {
+  margin-top: 5px;
 }
 
 .submenu-novelty {
   display: block;
-  margin-bottom: 14px;
 
   font-weight: 700;
 }
