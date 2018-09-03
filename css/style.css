@@ -782,7 +782,6 @@ img {
   position: relative;
 
   width: 293px;
-/*  min-height: 320px;*/
   padding-top: 6px;
   padding-left: 13px;
   padding-right: 14px;
@@ -843,7 +842,6 @@ img {
     vertical-align: middle;
 
   margin-top: 8px;
-/*margin-bottom: 11px;*/
 
   text-align: center;
   color: #ffffff;
@@ -867,7 +865,7 @@ img {
 .button-product {
   display: none;
   position: absolute;
-  bottom: 22px;
+  bottom: -62px;
   left: 46px;
 
   padding: 10px 17px;
@@ -1002,12 +1000,15 @@ img {
 }
 
 .blog-preview-title {
-  position: relative;
+  display: inline-block;
+
+  width: 300px;
 }
 
 .blog-preview-title h4 {
   display: inline;
-  width: 300px;
+/*  position: relative;*/
+
   margin: 0;
   padding: 0;
 
@@ -1017,20 +1018,21 @@ img {
   color: #323232;
 
   background-color: rgba(255, 255, 255, 0.8);
+  box-shadow: inset 0 -2px 0 0 #323232;
 }
-
-.blog-preview-title::after {
+/*
+.blog-preview-title h4::after {
   content: "";
   position: absolute;
   left: 0;
-  bottom: 3px;
+  bottom: 5px;
 
-  display: inline;
   height: 2px;
   width: 100%;
 
   box-shadow: 0 2px #323232;
 }
+*/
 
 .subscription {
   display: flex;
@@ -1107,6 +1109,20 @@ img {
 
 .wrapper-contacts {
   position: relative;
+}
+
+.wrapper-contacts::before {
+  content: "";
+  position: absolute;
+  bottom: 151px;
+  left: 266px;
+
+  width: 80px;
+  height: 140px;
+
+  background-image: url(../img/svg/pin.svg);
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .contacts-field {
@@ -1221,6 +1237,8 @@ img {
   box-shadow: 0 1px rgba(255, 188, 158, 0.3);
 }
 
+/*-- Стилизация полей формы --*/
+
 .filters fieldset {
   margin: 0;
   padding: 0;
@@ -1237,8 +1255,8 @@ img {
   list-style: none;
 }
 
-label[for="filter-sorting"],
-label[for="filter-price"],
+.filters label[for="filter-sorting"],
+.filters label[for="filter-price"],
 .filters legend {
   font-size: 14px;
   font-weight: 500;
@@ -1457,14 +1475,16 @@ label[for="filter-price"],
   justify-content: space-between;
   flex-wrap: wrap;
 
-  width: 320px;
+  width: 304px;
   margin: 0 auto;
-
 }
 
-.footer-menu li {
-  width: 160px;
+.footer-menu li:nth-child(odd) {
+  width: 140px;
+}
 
+.footer-menu li:nth-child(even) {
+  width: 160px;
 }
 
 .footer-menu a {
@@ -1493,10 +1513,10 @@ label[for="filter-price"],
 
 .footer-menu .footer-menu-love::before {
   content: "";
+  position: absolute;
   top: 2px;
   left: -22px;
 
-  position: absolute;
   width: 15px;
   height: 13px;
 
@@ -1521,9 +1541,11 @@ label[for="filter-price"],
 }
 
 /*--- modal-feedback ---*/
+.button-contacts:active .modal-feedback {
+  display: block;
+}
 
 .modal {
-  display: none;
   position: fixed;
 
   background-color: #f8f7f4;
@@ -1531,8 +1553,10 @@ label[for="filter-price"],
 }
 
 .modal-feedback {
+  display: none;
+
   top: 337px;
-  left: /*381px*/50%;
+  left: 50%;
 
   width: 478px;
   min-height: 443px;
