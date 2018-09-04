@@ -1117,12 +1117,23 @@ img {
   border: none;
   outline: none;
 }
+.contacts {
+  position: relative;
+}
 
 .contacts img {
   display: block;
 
-  min-height: 430px;
+  height: 430px;
   margin: 0 auto;
+}
+
+.contacts iframe {
+  position: absolute;
+  width: 100%;
+  height: 430px;
+
+  z-index: 1;
 }
 
 .wrapper-contacts {
@@ -1154,6 +1165,8 @@ img {
 
   background-color: #ffffff;
   border-radius: 15px;
+
+  z-index: 2;
 }
 
 .contacts-field p {
@@ -1812,6 +1825,21 @@ img {
   min-height: 443px;
   padding: 20px 25px 27px;
   margin-left: -239px;
+}
+
+.modal-show {
+  display: block;
+}
+
+@keyframes shake {
+  0%, 100%                {transform: translateX(0);    }
+  10%, 30%, 50%, 70%, 90% {transform: translateX(-10px);}
+  20%, 40%, 60%, 80%      {transform: translateX(10px); }
+}
+
+.modal-error {
+  animation-name: shake;
+  animation-duration: 0.6s;
 }
 
 .modal-close {

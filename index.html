@@ -232,6 +232,7 @@
 
       <section class="contacts">
         <h2 class="visually-hidden">Контактная информация</h2>
+        <iframe src="https://yandex.ru/map-widget/v1/-/CBBYURgXPB" width="100%" height="430" frameborder="0" allowfullscreen="true"></iframe>
         <img src="img/map.png" alt="Схема проезда" width="1200" height="430">
         <div class="wrapper-contacts container">
           <div class="contacts-field">
@@ -300,19 +301,96 @@
       <form class="feedback-form" action="https://echo.htmlacademy.ru" method="post">
         <p>
           <label class="visually-hidden" for="feedback-name">Как вас зовут?</label>
-          <input type="text" name="name" id="feedback-name" placeholder="Как вас зовут?">
+          <input class="feedback-name" type="text" name="name" id="feedback-name" placeholder="Как вас зовут?">
         </p>
         <p>
           <label class="visually-hidden" for="feedback-email">Ваша почта для ответа?</label>
-          <input type="text" name="email" id="feedback-email" placeholder="Ваша почта для ответа?">
+          <input class="feedback-email" type="text" name="email" id="feedback-email" placeholder="Ваша почта для ответа?">
         </p>
         <p>
           <label class="visually-hidden" for="feedback-text">Напишите что-нибудь...</label>
-          <textarea name="feedback" id="feedback-text" cols="30" rows="10" placeholder="Напишите что-нибудь..."></textarea>
+          <textarea class="feedback-text" name="feedback" id="feedback-text" cols="30" rows="10" placeholder="Напишите что-нибудь..."></textarea>
         </p>
-        <button class="button button-" type="submit">Отправить</button>
+        <button class="button button-feedback" type="submit">Отправить</button>
       </form>
     </section>
+
+    <script>
+
+      var contacts = document.querySelector(".button-contacts");
+      var popup = document.querySelector(".modal-feedback");
+      var close = document.querySelector(".modal-close");
+
+      var form = popup.querySelector(".feedback-form");
+      var feedbackName = popup.querySelector(".feedback-name");
+      var feedbackEmail = popup.querySelector(".feedback-email");
+      var feedbackText = popup.querySelector(".feedback-text");
+
+      var isStorageSupport = true;
+      var storage = "";
+      var storage2 ="";
+
+      try {
+        storage = localStorage.getItem("feedback-name");
+        storage2 = localStorage.getItem("feedback-email");
+      } catch (err) {
+        isStorageSupport = false;
+      }
+
+      contacts.addEventListener("click", function (evt) {
+        evt.preventDefault();
+        popup.classList.add("modal-show");
+
+/*  адаптированный код из демки
+        if (storage) {
+          feedbackName.value = storage;
+          feedbackEmail.focus();
+        } else {
+          feedbackName.focus();
+        }
+*/
+      if (storage && storage2) {
+          feedbackName.value = storage;
+          feedbackEmail.value = storage2;
+          feedbackText.focus();
+        } else if (storage) {
+          feedbackName.value = storage;
+          feedbackEmail.focus();
+        } else {
+          feedbackName.focus();
+        }
+      });
+
+
+      close.addEventListener("click", function (evt) {
+        evt.preventDefault();
+        popup.classList.remove("modal-show");
+      });
+
+      form.addEventListener("submit", function (evt) {
+        if (!feedbackName.value || !feedbackEmail.value || !feedbackText.value) {
+          evt.preventDefault();
+          popup.classList.remove("modal-error");
+          popup.offsetWidth = popup.offsetWidth;
+          popup.classList.add("modal-error");
+        } else {
+          if (isStorageSupport) {
+          localStorage.setItem("feedback-name", feedbackName.value);
+          }
+        }
+      });
+
+      window.addEventListener("keydown", function (evt) {
+        if (evt.keyCode === 27) {
+          evt.preventDefault();
+          if (popup.classList.contains("modal-show")) {
+            popup.classList.remove("modal-show");
+            popup.classList.remove("modal-error");
+          }
+        }
+      });
+
+    </script>
 
   </body>
 </html>
