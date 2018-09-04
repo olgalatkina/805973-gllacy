@@ -390,6 +390,76 @@
         }
       });
 
+      var linkLogin = document.querySelector(".login__link");
+      var popupLogin = document.querySelector(".login-submenu");
+      var formLogin = popupLogin.querySelector(".login-form");
+      var emailLogin = popupLogin.querySelector("[name=email]");
+      var password = popupLogin.querySelector("[name=password]");
+
+/*      var isStorageSupport = true;
+      var storage3 = "";
+
+      try {
+        storage3 = localStorage.getItem("email");
+      } catch (err) {
+        isStorageSupport = false;
+      }
+*/
+      linkLogin.addEventListener("click", function (evt) {
+        evt.preventDefault();
+        popupLogin.classList.add("modal-show");
+
+/*        if (storage3) {
+          emailLogin.value = storage3;
+          password.focus();
+        } else {
+          emailLogin.focus();
+        }*/
+      });
+
+      formLogin.addEventListener("submit", function (evt) {
+        evt.preventDefault();
+/*        if (!emailLogin.value || !password.value) {
+          evt.preventDefault();
+          popupLogin.classList.remove("modal-error");
+          popupLogin.offsetWidth = popup.offsetWidth;
+          popupLogin.classList.add("modal-error");
+        } else {
+          if (isStorageSupport) {
+          localStorage.setItem("email", emailLogin.value);
+          }
+        }*/
+
+      });
+
+      window.addEventListener("keydown", function (evt) {
+        if (evt.keyCode === 27) {
+          evt.preventDefault();
+          if (popupLogin.classList.contains("modal-show")) {
+            popupLogin.classList.remove("modal-show");
+            popupLogin.classList.remove("modal-error");
+          }
+        }
+      });
+
+      var searchLink = document.querySelector(".search__link");
+      var searchForm = document.querySelector(".search__form");
+
+      searchLink.addEventListener("click", function (evt) {
+        evt.preventDefault();
+        searchForm.classList.toggle("modal-show");
+      });
+
+      window.addEventListener("keydown", function (evt) {
+        if (evt.keyCode === 27) {
+          evt.preventDefault();
+          if (searchForm.classList.contains("modal-show")) {
+            searchForm.classList.remove("modal-show");
+            searchForm.classList.remove("modal-error");
+          }
+        }
+      });
+
     </script>
 
   </body>
