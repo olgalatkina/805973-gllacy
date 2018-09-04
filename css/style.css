@@ -612,6 +612,7 @@ img {
 
   font-size: 0;
 
+  background-color: transparent;
   background-image: url(../img/svg/cross-small.svg);
   background-position: center;
   background-repeat: no-repeat;
@@ -1372,10 +1373,10 @@ img {
 
 .range-toggle {
   position: absolute;
-  top: -7px;
+  top: -8px;
 
-  width: 4px;
-  height: 4px;
+  width: 22px;
+  height: 22px;
 
   background-color: #849d8f;
   border: 9px solid #f8f7f4;
@@ -1436,8 +1437,7 @@ img {
   padding-right: 14px;
 }
 
-.fat-radio,
-.complement-checkbox {
+.radio-indicator + label {
   position: relative;
 
   padding-left: 32px;
@@ -1445,7 +1445,8 @@ img {
   cursor: pointer;
 }
 
-.radio-indicator {
+.radio-indicator + label::before {
+  content: "";
   position: absolute;
   top: -1px;
   left: 0;
@@ -1457,7 +1458,48 @@ img {
   border-radius: 50%;
 }
 
-.checkbox-indicator {
+.radio-indicator:hover + label::before,
+.radio-indicator:focus + label::before {
+  border-color: #ffffff;
+}
+
+.radio-indicator:disabled + label::before {
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+.radio-indicator:checked + label::after {
+  content: "";
+
+  position: absolute;
+  top: calc(50% - 4px);
+  left: 7px;
+
+  width: 8px;
+  height: 8px;
+
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+}
+
+.radio-indicator:checked:hover + label::after,
+.radio-indicator:checked:focus + label::after {
+  background-color: #ffffff;
+}
+
+.radio-indicator:disabled + label::after {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+.checkbox-indicator + label {
+  position: relative;
+
+  padding-left: 32px;
+
+  cursor: pointer;
+}
+
+.checkbox-indicator + label::before {
+  content: "";
   position: absolute;
   top: -1px;
   left: 0;
@@ -1465,19 +1507,37 @@ img {
   width: 23px;
   height: 23px;
 
-/*background-image: url(../img/svg/checkbox-off.svg);
+  background-image: url(../img/svg/checkbox-off.svg);
+  background-repeat: no-repeat;
   background-position: center;
-  background-repeat: no-repeat;*/
+  opacity: 0.8;
 }
 
-.fat-radio input[type="radio"]:hover + .radio-indicator,
-.fat-radio input[type="radio"]:focus + .radio-indicator{
-  border-color: #ffffff;
+.checkbox-indicator:checked + label::before {
+  content: "";
+  position: absolute;
+  top: -1px;
+  left: 0;
+
+  width: 27px;
+  height: 23px;
+
+  background-image: url(../img/svg/checkbox-on.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.8;
 }
 
-.complement-checkbox input[type="checkbox"]:hover + .checkbox-indicator path,
-.complement-checkbox input[type="checkbox"]:focus + .checkbox-indicator path{
-  fill: #ffffff;
+.checkbox-indicator:hover + label::before,
+.checkbox-indicator:focus + label::before,
+.checkbox-indicator:checked:hover + label::before,
+.checkbox-indicator:checked:focus + label::before {
+  opacity: 1;
+}
+
+.checkbox-indicator:disabled + label::before,
+.checkbox-indicator:checked:disabled + label::before {
+  opacity: 0.4;
 }
 
 /*
@@ -1487,43 +1547,6 @@ img {
   outline: 5px auto -webkit-focus-ring-color;
 }
 */
-
-.fat-radio input[type="radio"]:disabled + .radio-indicator {
-  border-color: rgba(255, 255, 255, 0.4);
-}
-
-.complement-checkbox input[type="checkbox"]:disabled + .checkbox-indicator path {
-  fill: rgba(255, 255, 255, 0.4);;
-}
-
-.fat-radio input[type="radio"]:checked + .radio-indicator::before {
-  content: "";
-
-  position: absolute;
-  top: calc(50% - 4px);
-  left: calc(50% - 4px);
-
-  width: 8px;
-  height: 8px;
-
-  background-color: rgba(255, 255, 255, 0.8);
-  border-radius: 50%;
-}
-
-.complement-checkbox input[type="checkbox"]:checked + .checkbox-indicator::before {
-  content: "";
-
-  position: absolute;
-  top: 0;
-  left: 0;
-
-  width: 27px;
-  height: 23px;
-
-  background-image: url(../img/svg/checkbox-on.svg);
-  background-position: center;
-  background-repeat: no-repeat;
-}
 
 .filter-complement {
   margin-right: 4px;
@@ -1773,6 +1796,7 @@ img {
 
 .modal {
   position: fixed;
+  z-index: 100;
 
   background-color: #f8f7f4;
   border-radius: 10px;
@@ -1803,6 +1827,7 @@ img {
 /*background-image: url(../img/svg/cross-big.svg);
   background-repeat: no-repeat;
   background-position: center;*/
+  background-color: transparent;
   border: 0;
 
   cursor: pointer;
