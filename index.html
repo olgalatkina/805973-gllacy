@@ -60,11 +60,11 @@
                   <form class="login-form" action="https://echo.htmlacademy.ru" method="post">
                     <p>
                       <label for="login-email" class="visually-hidden">Электронная почта</label>
-                      <input type="email" id="login-email" name="email" value="" placeholder="Электронная почта">
+                      <input class="login-email" type="email" id="login-email" name="email" value="" placeholder="Электронная почта">
                     </p>
                     <p>
                       <label for="login-password" class="visually-hidden">Пароль</label>
-                      <input type="password" id="login-password" name="password" value="" placeholder="Пароль">
+                      <input class="login-password" type="password" id="login-password" name="password" value="" placeholder="Пароль">
                     </p>
                     <button class="button button-login" type="submit">Войти</button>
                     <ul class="login-item">
@@ -94,15 +94,15 @@
       <div class="container container-slider">
       <section class="slider">
         <ul class=slider-list>
-          <li class="slider-item slide-1 id="slide-1">
+          <li class="slider-item slide-1">
             <h3 class="slider-title">Крем-брюле и пломбир с малиновым джемом</h3>
             <a href="#" class="button-slider">Давайте оба!</a>
           </li>
-          <li class="visually-hidden slider-item slide-2 id="slide-2">
+          <li class="visually-hidden slider-item slide-2">
             <h3 class="slider-title">Шоколадный пломбир и лимонный сорбет</h3>
             <a href="#" class="button-slider">Давайте оба!</a>
           </li>
-          <li class="visually-hidden slider-item slide-3 id="slide-3">
+          <li class="visually-hidden slider-item slide-3">
             <h3 class="slider-title">Пломбир с помадкой и клубничный щербет</h3>
             <a href="#" class="button-slider">Давайте оба!</a>
           </li>
@@ -236,7 +236,7 @@
 
       <section class="contacts">
         <h2 class="visually-hidden">Контактная информация</h2>
-        <iframe src="https://yandex.ru/map-widget/v1/-/CBBYURgXPB" width="100%" height="430" frameborder="0" allowfullscreen="true"></iframe>
+        <iframe src="https://yandex.ru/map-widget/v1/-/CBBYvPgCLD" width="560" height="400" allowfullscreen="true"></iframe>
         <img src="img/map.png" alt="Схема проезда" width="1200" height="430">
         <div class="wrapper-contacts container">
           <div class="contacts-field">
@@ -345,14 +345,6 @@
         evt.preventDefault();
         popup.classList.add("modal-show");
 
-/*  адаптированный код из демки
-        if (storage) {
-          feedbackName.value = storage;
-          feedbackEmail.focus();
-        } else {
-          feedbackName.focus();
-        }
-*/
       if (storage && storage2) {
           feedbackName.value = storage;
           feedbackEmail.value = storage2;
@@ -364,7 +356,6 @@
           feedbackName.focus();
         }
       });
-
 
       close.addEventListener("click", function (evt) {
         evt.preventDefault();
@@ -380,6 +371,7 @@
         } else {
           if (isStorageSupport) {
           localStorage.setItem("feedback-name", feedbackName.value);
+          localStorage.setItem("feedback-email", feedbackEmail.value);
           }
         }
       });
@@ -397,14 +389,14 @@
       var linkLogin = document.querySelector(".login__link");
       var popupLogin = document.querySelector(".login-submenu");
       var formLogin = popupLogin.querySelector(".login-form");
-      var emailLogin = popupLogin.querySelector("[name=email]");
-      var password = popupLogin.querySelector("[name=password]");
+      var emailLogin = popupLogin.querySelector(".login-email");
+      var password = popupLogin.querySelector(".login-password");
 
 /*      var isStorageSupport = true;
       var storage3 = "";
 
       try {
-        storage3 = localStorage.getItem("email");
+        storage3 = localStorage.getItem("login-email");
       } catch (err) {
         isStorageSupport = false;
       }

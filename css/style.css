@@ -444,6 +444,8 @@ img {
   position: absolute;
   top: 38px;
   right: 0;
+
+  z-index: 1;
 }
 
 .login:hover .login-submenu {
@@ -553,7 +555,6 @@ img {
   margin-right: 20px;
 
   border: none;
-  outline: none;
 }
 
 .login-item-link {
@@ -1199,8 +1200,8 @@ img {
   max-width: 129px;
 
   border: none;
-  outline: none;
 }
+
 .contacts {
   position: relative;
 }
@@ -1637,14 +1638,6 @@ img {
   opacity: 0.4;
 }
 
-/*
-.radio-indicator:focus {
-  border-color: #663d15;
-  outline: thin dotted;
-  outline: 5px auto -webkit-focus-ring-color;
-}
-*/
-
 .filter-complement {
   margin-right: 4px;
 }
@@ -1810,10 +1803,6 @@ img {
 
 .social-button:active path {
   fill: #e9e9e9;
-}
-
-.footer-menu {
-
 }
 
 .footer-menu ul {
