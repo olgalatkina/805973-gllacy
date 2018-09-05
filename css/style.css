@@ -1218,6 +1218,8 @@ img {
   width: 100%;
   height: 430px;
 
+  frameborder: 0;
+
   z-index: 1;
 }
 
