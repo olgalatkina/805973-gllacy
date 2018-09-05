@@ -392,7 +392,7 @@
       var emailLogin = popupLogin.querySelector(".login-email");
       var password = popupLogin.querySelector(".login-password");
 
-/*      var isStorageSupport = true;
+      var isStorageSupport = true;
       var storage3 = "";
 
       try {
@@ -400,31 +400,31 @@
       } catch (err) {
         isStorageSupport = false;
       }
-*/
+
       linkLogin.addEventListener("click", function (evt) {
         evt.preventDefault();
         popupLogin.classList.add("modal-show");
 
-/*        if (storage3) {
+        if (storage3) {
           emailLogin.value = storage3;
           password.focus();
         } else {
           emailLogin.focus();
-        }*/
+        }
       });
 
       formLogin.addEventListener("submit", function (evt) {
         evt.preventDefault();
-/*        if (!emailLogin.value || !password.value) {
+        if (!emailLogin.value || !password.value) {
           evt.preventDefault();
           popupLogin.classList.remove("modal-error");
           popupLogin.offsetWidth = popup.offsetWidth;
           popupLogin.classList.add("modal-error");
         } else {
           if (isStorageSupport) {
-          localStorage.setItem("email", emailLogin.value);
+          localStorage.setItem("login-email", emailLogin.value);
           }
-        }*/
+        }
 
       });
 
@@ -437,6 +437,7 @@
           }
         }
       });
+/*
 
       var searchLink = document.querySelector(".search__link");
       var searchForm = document.querySelector(".search__form");
@@ -455,6 +456,7 @@
           }
         }
       });
+*/
 
     </script>
 
