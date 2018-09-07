@@ -865,7 +865,7 @@ img {
 
 .product-item img {
   position: relative;
-  margin-bottom: 8px;
+  margin-bottom: 5px;
 }
 
 .main-page .product-item::after {
@@ -949,24 +949,28 @@ img {
 .button-product {
   display: none;
   position: absolute;
-  bottom: -62px;
-/*  left: 50%;*/
+  bottom: -58px;
   left: 0;
+  right: 0;
 
+
+  min-height: 44px;
   padding: 10px 17px;
-/*  margin-left: -25%;*/
-  margin-left: 45px;
+  margin-left: 15%;
+  margin-right: 16%;
 
-  white-space: nowrap; /* Отменяем перенос текста */
-  overflow: hidden; /* Обрезаем содержимое */
-  text-overflow: ellipsis; /* Многоточие */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .product-item:hover .button-product {
   display: block;
   z-index: 2;
+}
 
-/*  white-space: normal; Обычный перенос текста */
+.product-item:hover .button-product:hover {
+  white-space: normal;
 }
 
 .product-item:hover.product-item::before {
@@ -977,7 +981,7 @@ img {
   z-index: 1;
 
   width: 293px;
-  height: calc(100% + 77px);
+  height: calc(100% + 73px);
 
   background-color: rgba(255, 255, 255, 0.2);
   border-radius: 5px;
