@@ -126,16 +126,6 @@ img {
   box-shadow: inset 0 2px 2px rgba(172, 16, 0, 1);
 }
 
-.button-product {
-  display: none;
-
-  padding: 10px 17px;
-}
-
-.product__link:hover + .button-product {
-  display: block;
-}
-
 .container {
   display: flex;
   justify-content: space-between;
@@ -960,15 +950,23 @@ img {
   display: none;
   position: absolute;
   bottom: -62px;
+/*  left: 50%;*/
   left: 0;
 
   padding: 10px 17px;
-  margin: 0 45px;
+/*  margin-left: -25%;*/
+  margin-left: 45px;
+
+  white-space: nowrap; /* Отменяем перенос текста */
+  overflow: hidden; /* Обрезаем содержимое */
+  text-overflow: ellipsis; /* Многоточие */
 }
 
 .product-item:hover .button-product {
   display: block;
   z-index: 2;
+
+/*  white-space: normal; Обычный перенос текста */
 }
 
 .product-item:hover.product-item::before {
