@@ -875,6 +875,7 @@ img {
 
 .product-item img {
   position: relative;
+  margin-bottom: 8px;
 }
 
 .main-page .product-item::after {
@@ -919,6 +920,7 @@ img {
 
 .product-text {
   position: relative;
+
   margin: 0;
   padding: 0;
 
@@ -929,10 +931,10 @@ img {
 
 .product__link {
   position: relative;
-  display: inline-block;
-  vertical-align: top;
+  display: block;
 
-  margin-top: 8px;
+  width: 256px;
+  margin: 0 auto;
 
   text-align: center;
   color: #ffffff;
@@ -940,7 +942,7 @@ img {
 
 .product__link .product-text {
   display: inline;
-  vertical-align: middle;
+  vertical-align: top;
 
   box-shadow: 0 1px rgba(255, 255, 255, 0.3);
 }
@@ -1234,7 +1236,7 @@ img {
 
 .contacts-field {
   position: absolute;
-  top: -367px;
+  bottom: 62px;
   right: 27px;
 
   width: 302px;
