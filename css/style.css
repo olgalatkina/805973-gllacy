@@ -1418,6 +1418,7 @@ img {
 
   background-color: rgba(255, 255, 255, 0.2);
   background-image: url("../img/select-arrow.png");
+/*  background-image: url("../img/svg/select-arrow.svg");*/
   background-position: right 16px center;
   background-repeat: no-repeat;
 
@@ -1445,14 +1446,6 @@ display: none;
 
   background-color: #ffffff;
 }
-
-/*--- работает по умолчанию
-.filters-select option[selected] {
-  color: #ffffff;
-
-  background-color: #1e90ff;
-}
-*/
 
 .filter-range {
   width: 218px;
@@ -1909,10 +1902,12 @@ display: none;
   color: #fefefe;
 }
 
-/*--- modal-feedback
-.button-contacts:active .modal-feedback {
-  display: block;
-} ---*/
+/*-- modal-feedback --*/
+
+@keyframes melt {
+  0%    {opacity: 0;}
+  100%  {opacity: 1;}
+}
 
 .modal {
   position: fixed;
@@ -1936,6 +1931,8 @@ display: none;
 
 .modal-show {
   display: block;
+
+  animation: melt 1s;
 }
 
 @keyframes shake {
