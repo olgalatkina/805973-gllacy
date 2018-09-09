@@ -7,15 +7,22 @@
       var feedbackEmail = popup.querySelector(".feedback-email");
       var feedbackText = popup.querySelector(".feedback-text");
 
+      /*
       var isStorageSupport = true;
       var storage = "";
-      var storage2 ="";
+      var storage2 = "";
+      */
+
+      var isStorageSupport, storage, storage2;
 
       try {
-        storage = localStorage.getItem("feedback-name");
+        isStorageSupport = true;
+        storage  = localStorage.getItem("feedback-name");
         storage2 = localStorage.getItem("feedback-email");
       } catch (err) {
         isStorageSupport = false;
+        storage  = "";
+        storage2 = "";
       }
 
       contacts.addEventListener("click", function (evt) {
