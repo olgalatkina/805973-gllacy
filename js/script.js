@@ -1,3 +1,21 @@
+var coordinates = {lat: 59.938778, lng: 30.323056}
+var pin = src="img/svg/pin.svg"
+
+function initMap() {
+
+  map = new google.maps.Map(document.getElementById('map'), {
+    center: coordinates,
+    zoom: 15
+  }),
+
+  marker = new google.maps.Marker({
+    position: coordinates,
+    map: map,
+    icon: pin,
+    animation: google.maps.Animation.DROP
+  });
+}
+
 var contacts = document.querySelector(".button-contacts");
 var popup = document.querySelector(".modal-feedback");
 var close = document.querySelector(".modal-close");
