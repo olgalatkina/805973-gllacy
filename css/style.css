@@ -1371,10 +1371,14 @@ img {
 }
 
 .filter-select,
-.filter-range,
 .filters fieldset {
+  margin-right: 16px;
+}
+
+.filter-range {
   margin-right: 15px;
 }
+
 
 .filter-select-title,
 .filter-range-title,
@@ -1394,9 +1398,9 @@ img {
 }
 
 .select-item {
-  width: 194px;
+  width: 193px;
   height: 35px;
-  padding: 8px 22px 8px 15px;
+  padding: 8px 20px 8px 15px;
 
   font-size: 16px;
   font-weight: 500;
@@ -1405,11 +1409,24 @@ img {
 
   background-color: rgba(255, 255, 255, 0.2);
   background-image: url("../img/select-arrow.png");
-  background-position: right 16px center;
+  background-position: right 15px center;
   background-repeat: no-repeat;
 
   border: none;
-  border-radius: 16px;
+  border-radius: 17px;
+}
+
+.select-item:hover {
+  color: #323232;
+
+  background-image: url("../img/select-arrow-hover.png");
+}
+
+.select-item:focus {
+  color: #323232;
+
+  background-color: #ffffff;
+  background-image: url("../img/select-arrow-hover.png");
 }
 
 .select-item {
@@ -1445,10 +1462,10 @@ img {
 }
 
 .range-controls {
-  padding: 16px 21px 15px;
+  padding: 16px 20px 15px 21px;
 
   background-color: rgba(255, 255, 255, 0.2);
-  border-radius: 16px;
+  border-radius: 17px;
 }
 
 .range-controls .scale {
@@ -1463,7 +1480,7 @@ img {
 .range-controls .bar {
   width: 107px;
   height: 4px;
-  margin-left: 20px;
+  margin-left: 21px;
 
   background-color: #f8f7f4;
 }
@@ -1509,7 +1526,7 @@ img {
   flex-wrap: wrap;
   align-items: baseline;
 
-  border-radius: 16px;
+  border-radius: 17px;
   background-color: rgba(255, 255, 255, 0.2);
 }
 
@@ -1522,12 +1539,30 @@ img {
   padding-left: 14px;
 }
 
+.filter-fat:first-child {
+  padding-left: 14px;
+}
+
+.filter-fat:nth-child(2),
+.filter-fat:nth-child(3) {
+  padding-right: 8px;
+}
+
 .filter-fat:last-child {
   padding-right: 16px;
 }
 
 .filter-complement:first-child {
   padding-left: 16px;
+  padding-right: 7px;
+}
+
+.filter-complement:nth-child(3) {
+  padding-right: 12px;
+}
+
+.filter-complement:nth-child(4) {
+  padding-right: 8px;
 }
 
 .filter-complement:last-child {
@@ -1601,8 +1636,8 @@ img {
   top: -1px;
   left: 0;
 
-  width: 21px;
-  height: 21px;
+  width: 20px;
+  height: 20px;
 
   background-color: transparent;
   background-image: url(../img/svg/checkbox-off.svg);
@@ -1617,8 +1652,8 @@ img {
   top: -1px;
   left: 0;
 
-  width: 26px;
-  height: 21px;
+  width: 24px;
+  height: 20px;
 
   background-color: transparent;
   background-image: url(../img/svg/checkbox-on.svg);
@@ -1769,7 +1804,7 @@ img {
 }
 
 .footer-menu {
-  padding-top: 13px;
+  padding-top: 12px;
 }
 
 .social-button-list,
@@ -1819,6 +1854,10 @@ img {
   fill: #e9e9e9;
 }
 
+.social-button svg {
+  border-radius: 50%;
+}
+
 .footer-menu ul {
   display: flex;
   justify-content: space-between;
@@ -1843,6 +1882,10 @@ img {
   color: #ffffff;
 
   box-shadow: 0 1px rgba(255, 255, 255, 0.3);
+}
+
+.copyright-logo {
+  margin-left: 1px;
 }
 
 .academy {
@@ -1916,8 +1959,8 @@ img {
 
   width: 478px;
   min-height: 443px;
-  padding: 20px 26px 27px 24px;
-  margin-left: -239px;
+  padding: 20px 26px 26px 24px;
+  margin-left: -219px;
 }
 
 .modal-show {
