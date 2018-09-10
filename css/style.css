@@ -758,8 +758,7 @@ img {
   cursor: pointer;
 }
 
-.toggle:hover,
-.toggle:focus {
+.toggle-on {
   background-color: #ffffff;
 }
 
