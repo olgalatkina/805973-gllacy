@@ -1507,7 +1507,7 @@ img {
   width: 20px;
   height: 20px;
 
-  background-color: #849d8f;
+  background-color: #ababab;
   border: 8px solid #f8f7f4;
   border-radius: 50%;
 
@@ -1835,7 +1835,7 @@ img {
   justify-content: space-between;
   flex-wrap: wrap;
 
-  width: 185px;
+  width: 187px;
   margin: 0 auto;
 }
 
