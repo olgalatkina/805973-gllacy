@@ -30,7 +30,7 @@ formLogin.addEventListener("submit", function (evt) {
   if (!emailLogin.value || !password.value) {
     evt.preventDefault();
     popupLogin.classList.remove("modal-error");
-    popupLogin.offsetWidth = popup.offsetWidth;
+    popupLogin.offsetWidth = popupLogin.offsetWidth;
     popupLogin.classList.add("modal-error");
   } else {
     if (isStorageSupport) {
