@@ -1,8 +1,6 @@
 html,
 body {
   min-width: 1200px;
-/* попытка подключать карту через js */
-  height: 100%;
   margin: 0;
   padding: 0;
 }
@@ -582,10 +580,10 @@ img {
   right: 0;
 
   width: 539px;
-  min-height: 242px;
-  padding: 16px;
-  padding-top: 17px;
+  padding-top: 18px;
   padding-right: 13px;
+  padding-bottom: 21px;
+  padding-left: 16px;
 
   background-color: #f8f7f4;
   border-radius: 5px;
@@ -607,9 +605,9 @@ img {
 
 .submenu-table td {
   padding-right: 9px;
-  padding-bottom: 18px;
+  padding-bottom: 16px;
 
-  vertical-align: middle;
+  vertical-align: top;
   text-align: left;
 }
 
@@ -619,22 +617,29 @@ img {
 
 .submenu-table .col-1 {
   width: 23px;
+
+  vertical-align: middle;
 }
 
 .submenu-table .col-2 {
   width: 46px;
+
+  vertical-align: middle;
 }
 
 .submenu-table .col-3 {
   width: 244px;
+  padding-top: 10px;
   padding-right: 14px;
 }
 
 .submenu-table .col-4 {
+  padding-top: 10px;
   width: 123px;
 }
 
 .submenu-table .col-5 {
+  padding-top: 10px;
   width: 70px;
 }
 
@@ -760,6 +765,10 @@ img {
   border-radius: 50%;
 
   cursor: pointer;
+}
+
+.toggle:hover {
+  background-color: rgba(248, 247, 244, 0.4);
 }
 
 .toggle-on {
@@ -1197,11 +1206,6 @@ img {
   z-index: 1;
 }
 
-#map {
-/* попытка подключать карту через js */
-  height: 100%;
-}
-
 .wrapper-contacts {
   position: relative;
 }
@@ -1355,7 +1359,7 @@ img {
   flex-wrap: wrap;
   align-items: flex-start;
 
-  margin-bottom: 17px;
+  margin-bottom: 16px;
 }
 
 .filters-second-line {
@@ -1378,9 +1382,12 @@ img {
   list-style: none;
 }
 
-.filter-select,
-.filters fieldset {
+.filter-select {
   margin-right: 16px;
+}
+
+.filters-second-line fieldset {
+  margin-right: 15px;
 }
 
 .filter-range {
@@ -1534,7 +1541,7 @@ img {
   flex-wrap: wrap;
   align-items: baseline;
 
-  border-radius: 17px;
+  border-radius: 18px;
   background-color: rgba(255, 255, 255, 0.2);
 }
 
@@ -1574,7 +1581,11 @@ img {
 }
 
 .filter-complement:last-child {
-  padding-right: 14px;
+  padding-right: 15px;
+}
+
+.filter-complement {
+  margin-right: 3px;
 }
 
 .radio-indicator + label {
@@ -1682,10 +1693,6 @@ img {
   opacity: 0.4;
 }
 
-.filter-complement {
-  margin-right: 3px;
-}
-
 .button-filter {
   margin-top: auto;
 
@@ -1695,9 +1702,9 @@ img {
   color: #ffffff;
 
   min-width: 144px;
-  min-height: 37px;
+  min-height: 36px;
   border: solid 2px #ffffff;
-  border-radius: 17px;
+  border-radius: 18px;
   background-color: rgba(255, 255, 255, 0.2)
 }
 
@@ -2095,7 +2102,7 @@ img {
   width: 100%;
   height: 100%;
 
-  background-color: rgba(255, 255, 255, 0.3);
+  background-color: rgba(0, 0, 0, 0.3);
 
   z-index: 99;
 }
