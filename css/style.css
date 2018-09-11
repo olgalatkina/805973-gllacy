@@ -16,7 +16,7 @@ body {
   color: #323232;
 
   background-color: #849d8f;
-  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.2) 656px, #849d8f 100%);
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.2) 0, transparent 656px);
 }
 
 *, *::before, *::after {
@@ -338,7 +338,6 @@ img {
 }
 
 .search__link {
-  /*position: relative;*/
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1423,7 +1422,7 @@ img {
   color: #ffffff;
 
   background-color: rgba(255, 255, 255, 0.2);
-  background-image: url("../img/select-arrow.png");
+  background-image: url("../img/svg/icon-down-dir-white.svg");
   background-position: right 15px center;
   background-repeat: no-repeat;
 
@@ -1434,14 +1433,14 @@ img {
 .select-item:hover {
   color: #323232;
 
-  background-image: url("../img/select-arrow-hover.png");
+  background-image: url("../img/svg/icon-down-dir.svg");
 }
 
 .select-item:focus {
   color: #323232;
 
   background-color: #ffffff;
-  background-image: url("../img/select-arrow-hover.png");
+  background-image: url("../img/svg/icon-down-dir.svg");
 }
 
 .select-item {
