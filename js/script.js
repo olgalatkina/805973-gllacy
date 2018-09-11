@@ -1,3 +1,73 @@
+var linkLogin = document.querySelector(".login__link");
+var popupLogin = document.querySelector(".login-submenu");
+var formLogin = popupLogin.querySelector(".login-form");
+var emailLogin = popupLogin.querySelector(".login-email");
+var password = popupLogin.querySelector(".login-password");
+
+var isStorageSupport = true;
+var storage3 = "";
+
+try {
+  storage3 = localStorage.getItem("login-email");
+} catch (err) {
+  isStorageSupport = false;
+}
+
+linkLogin.addEventListener("click", function (evt) {
+  evt.preventDefault();
+  popupLogin.classList.add("modal-show");
+
+  if (storage3) {
+    emailLogin.value = storage3;
+    password.focus();
+  } else {
+    emailLogin.focus();
+  }
+});
+
+formLogin.addEventListener("submit", function (evt) {
+  evt.preventDefault();
+  if (!emailLogin.value || !password.value) {
+    evt.preventDefault();
+    popupLogin.classList.remove("modal-error");
+    popupLogin.offsetWidth = popup.offsetWidth;
+    popupLogin.classList.add("modal-error");
+  } else {
+    if (isStorageSupport) {
+    localStorage.setItem("login-email", emailLogin.value);
+    }
+  }
+});
+
+window.addEventListener("keydown", function (evt) {
+  if (evt.keyCode === 27) {
+    evt.preventDefault();
+    if (popupLogin.classList.contains("modal-show")) {
+      popupLogin.classList.remove("modal-show");
+      popupLogin.classList.remove("modal-error");
+    }
+  }
+});
+
+var searchLink = document.querySelector(".search__link");
+var searchForm = document.querySelector(".search__form");
+
+searchLink.addEventListener("click", function (evt) {
+  evt.preventDefault();
+  searchForm.classList.toggle("modal-show");
+});
+
+window.addEventListener("keydown", function (evt) {
+  if (evt.keyCode === 27) {
+    evt.preventDefault();
+    if (searchForm.classList.contains("modal-show")) {
+      searchForm.classList.remove("modal-show");
+    }
+  }
+});
+
+/*spatial-lodge-216107*/
+
 var coordinates = {lat: 59.938778, lng: 30.323056}
 var pin = src="img/svg/pin.svg"
 
@@ -84,74 +154,6 @@ window.addEventListener("keydown", function (evt) {
     }
     if (feedbackOverlay.classList.contains("modal-overlay-show")) {
       feedbackOverlay.classList.remove("modal-overlay-show");
-    }
-  }
-});
-
-var linkLogin = document.querySelector(".login__link");
-var popupLogin = document.querySelector(".login-submenu");
-var formLogin = popupLogin.querySelector(".login-form");
-var emailLogin = popupLogin.querySelector(".login-email");
-var password = popupLogin.querySelector(".login-password");
-
-var isStorageSupport = true;
-var storage3 = "";
-
-try {
-  storage3 = localStorage.getItem("login-email");
-} catch (err) {
-  isStorageSupport = false;
-}
-
-linkLogin.addEventListener("click", function (evt) {
-  evt.preventDefault();
-  popupLogin.classList.add("modal-show");
-
-  if (storage3) {
-    emailLogin.value = storage3;
-    password.focus();
-  } else {
-    emailLogin.focus();
-  }
-});
-
-formLogin.addEventListener("submit", function (evt) {
-  evt.preventDefault();
-  if (!emailLogin.value || !password.value) {
-    evt.preventDefault();
-    popupLogin.classList.remove("modal-error");
-    popupLogin.offsetWidth = popup.offsetWidth;
-    popupLogin.classList.add("modal-error");
-  } else {
-    if (isStorageSupport) {
-    localStorage.setItem("login-email", emailLogin.value);
-    }
-  }
-});
-
-window.addEventListener("keydown", function (evt) {
-  if (evt.keyCode === 27) {
-    evt.preventDefault();
-    if (popupLogin.classList.contains("modal-show")) {
-      popupLogin.classList.remove("modal-show");
-      popupLogin.classList.remove("modal-error");
-    }
-  }
-});
-
-var searchLink = document.querySelector(".search__link");
-var searchForm = document.querySelector(".search__form");
-
-searchLink.addEventListener("click", function (evt) {
-  evt.preventDefault();
-  searchForm.classList.toggle("modal-show");
-});
-
-window.addEventListener("keydown", function (evt) {
-  if (evt.keyCode === 27) {
-    evt.preventDefault();
-    if (searchForm.classList.contains("modal-show")) {
-      searchForm.classList.remove("modal-show");
     }
   }
 });
