@@ -11,6 +11,7 @@ try {
   storage3 = localStorage.getItem("login-email");
 } catch (err) {
   isStorageSupport = false;
+  storage3 = "";
 }
 
 linkLogin.addEventListener("click", function (evt) {
