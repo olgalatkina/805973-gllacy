@@ -27,7 +27,6 @@ linkLogin.addEventListener("click", function (evt) {
 });
 
 formLogin.addEventListener("submit", function (evt) {
-  evt.preventDefault();
   if (!emailLogin.value || !password.value) {
     evt.preventDefault();
     popupLogin.classList.remove("modal-error");
