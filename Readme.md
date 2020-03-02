@@ -3,6 +3,8 @@
 * Студент: [Ольга Латкина](https://up.htmlacademy.ru/htmlcss/22/user/805973).
 * Наставник: [Ксения Торкова](https://htmlacademy.ru/profile/id23249).
 
+---
+
 https://olgalatkina.github.io/805973-gllacy/index.html
 
 ---
